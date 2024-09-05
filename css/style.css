@@ -1,0 +1,38 @@
+html {
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 96px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container > div {
+  flex: 1;
+  margin: 0.5em;
+}
+
+.pictures_grid > img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.static_picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.static_picture img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
