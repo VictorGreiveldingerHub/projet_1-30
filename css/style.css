@@ -1,28 +1,47 @@
 html {
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 .title {
   font-size: 96px;
   text-transform: uppercase;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .container {
   display: flex;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
-  overflow: hidden;
 }
 
 .container > div {
   flex: 1;
-  margin: 0.5em;
 }
 
-.pictures_grid > img {
-  height: 100px;
-  width: 100px;
+.pictures_grid {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  transform: translate(0%, 0%);
+}
+
+.pictures_grid > .hover_img {
+  height: 40vmin;
+  width: 25vmin;
   object-fit: cover;
+  display: flex;
+  margin: 0 auto 30px auto;
 }
 
 .static_picture {
@@ -32,7 +51,7 @@ html {
 }
 
 .static_picture img {
-  width: 50%;
+  width: 75%;
   height: 100%;
   object-fit: cover;
 }
