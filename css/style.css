@@ -11,6 +11,9 @@ html {
   z-index: 10;
 }
 
+/*
+* Disable image selection
+*/
 .selectDisable {
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -23,6 +26,7 @@ html {
   display: flex;
   height: 80vh;
   width: 100%;
+  margin: 1em 3em;
 }
 
 .container > div {
@@ -32,16 +36,22 @@ html {
 .pictures_grid {
   display: flex;
   flex-wrap: wrap;
+  gap: 1em;
   position: relative;
-  transform: translate(0%, 0%);
+  transform: translate(0%, 35%);
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.pictures_grid > img {
+  width: 30%;
 }
 
 .pictures_grid > .hover_img {
-  height: 40vmin;
-  width: 25vmin;
   object-fit: cover;
-  display: flex;
-  margin: 0 auto 30px auto;
+  height: 25%;
+  object-position: 0% 0%;
 }
 
 .static_picture {
@@ -51,7 +61,7 @@ html {
 }
 
 .static_picture img {
-  width: 75%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
